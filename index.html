@@ -5,8 +5,19 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="static/css/font-awesome.min.css">
   <style type="text/css">
-    button
-    {
+    .player{
+      width: 800px;
+      height: 600px;
+    }
+    .player .screen{
+      width: 100%;
+      height: 100%;
+      display: grid;
+    }
+    .player .bottom-controls {
+      background-color:black;
+    }
+    .player .bottom-controls .left-buttons {
       background: rgba(0, 0, 0, 0);
       border-style: none;
       cursor: pointer;
@@ -17,17 +28,22 @@
   </style>
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px;">
-    <div class="js-video-container" style="width: 100%; height: 100%"></div>
+  <div class="player" id="player">
+    <div class="screen">
+      <div class="js-video-container"></div>
+    </div>
     <!-- Here can be placed player controls: play and volume buttons -->
-    <div style="background-color:black;">
-      <button class="js-play-button" name="play" type="button">
-        <i class="fa fa-play" aria-hidden="true"></i>
-      </button>
+    <div class="bottom-controls">
+      <div class="left-buttons">
+        <button class="js-play-button" name="play" type="button">
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
 
-      <button class="js-pause-button" name="pause" type="button">
-        <i class="fa fa-pause" aria-hidden="true"></i>
-      </button>
+        <button class="js-pause-button" name="pause" type="button">
+          <i class="fa fa-pause" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="right-buttons"></div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
