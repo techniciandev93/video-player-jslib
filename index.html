@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="static/css/font-awesome.min.css">
   <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style type="text/css">
     .player{
       width: 800px;
@@ -20,8 +24,17 @@
       background-color:black;
       display: flex;
     }
-    .player .vp-progress{
+    .player .viewing-panel{
       flex-grow: 1;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      align-items: center;
+      display: flex;
+      margin-bottom: 2px;
+    }
+    .player .viewing-panel .viewing-progressbar{
+      flex-grow: 1;
+      background-color: grey;
     }
     .player .left-buttons {
       display: inline-flex;
@@ -60,7 +73,17 @@
           </button>
         </div>
       </div>
-      <div class="vp-progress"></div>
+      <div class="viewing-panel">
+        <div class="js-current-time"></div>
+
+
+        <div class="js-progress viewing-progressbar">
+          <div class="js-progress-slider"></div>
+        </div>
+
+
+        <div class="js-duration"></div>
+      </div>
       <div class="right-buttons">
         <div class="player-button">
           <button class="js-fullscreen-button" name="volume-off" type="button">
