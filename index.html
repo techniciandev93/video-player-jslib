@@ -36,12 +36,12 @@
       flex-grow: 1;
       display: flex;
       align-items: center;
+      padding: 0 10px;
     }
     .player .viewing-panel .viewing-progressbar .progress-slider{
       background-color: red;
       border-radius: 10px;
       height: 5px;
-      margin: 0 11px;
     }
     .player .left-buttons {
       display: inline-flex;
@@ -62,10 +62,9 @@
       width: 8px;
       background-color: red;
       border-radius: 50%;
-      display: inline-block;
       border: 3px solid white;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      margin-left: -12px;
+      margin-left: -6px;
     }
   </style>
 </head>
@@ -96,8 +95,8 @@
 
 
         <div class="js-progress viewing-progressbar">
-          <span class="js-progress-slider progress-slider"></span>
-          <span class="dot"></span>
+          <div class="js-progress-slider progress-slider"></div>
+          <div class="dot"></div>
         </div>
 
         <div class="js-duration"></div>
